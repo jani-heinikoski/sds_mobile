@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginHorizontal="8dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/textview_first_number"
+        style="@style/Introduction.TextView"
+        android:layout_marginTop="32dp"
+        android:labelFor="@id/edittext_first_number"
+        android:text="@string/activity_main_first_number_label_text" />
+
+    <EditText
+        android:id="@+id/edittext_first_number"
+        style="@style/Introduction.EditText"
+        android:layout_below="@id/textview_first_number"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textview_second_number"
+        style="@style/Introduction.TextView"
+        android:layout_below="@id/edittext_first_number"
+        android:layout_marginTop="32dp"
+        android:labelFor="@id/edittext_first_number"
+        android:text="@string/activity_main_second_number_label_text" />
+
+    <EditText
+        android:id="@+id/edittext_second_number"
+        style="@style/Introduction.EditText"
+        android:layout_below="@id/textview_second_number"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textview_result"
+        style="@style/Introduction.TextView"
+        android:layout_below="@id/edittext_second_number"
+        android:layout_marginTop="32dp"
+        android:text="@string/activity_main_result_label_text" />
 
 
 </RelativeLayout>

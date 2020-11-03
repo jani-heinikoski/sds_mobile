@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Introduction</string>
+    <string name="app_name">Calculator</string>
+    <string name="activity_main_first_number_label_text">Enter the first number:</string>
+    <string name="activity_main_second_number_label_text">Enter the second number:</string>
+    <string name="activity_main_result_label_text">Sum of the given numbers equals:</string>
 </resources>
