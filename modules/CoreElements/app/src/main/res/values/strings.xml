@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Quick Launcher</string>
+    <string name="activity_main_launch_second_activity_button_text">Launch Second Activity</string>
+</resources>
