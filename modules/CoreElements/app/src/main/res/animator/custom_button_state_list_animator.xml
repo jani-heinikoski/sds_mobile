@@ -32,6 +32,13 @@
                 android:valueFrom="?attr/colorOnBackground"
                 android:valueTo="?attr/colorAccent"
                 android:valueType="colorType" />
+            <objectAnimator
+                android:duration="100"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="translationZ"
+                android:valueFrom="12"
+                android:valueTo="0"
+                android:valueType="floatType" />
         </set>
     </item>
     <item
@@ -56,13 +63,36 @@
                 android:valueFrom="?attr/colorAccent"
                 android:valueTo="?attr/colorOnBackground"
                 android:valueType="colorType" />
+            <objectAnimator
+                android:duration="100"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="translationZ"
+                android:valueTo="12"
+                android:valueType="floatType" />
         </set>
     </item>
     <item>
-        <objectAnimator
-            android:duration="0"
-            android:propertyName="ScaleX"
-            android:valueTo="1"
-            android:valueType="floatType" />
+        <set>
+            <objectAnimator
+                android:duration="0"
+                android:propertyName="ScaleX"
+                android:valueTo="1"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="0"
+                android:propertyName="ScaleY"
+                android:valueTo="1"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="0"
+                android:propertyName="textColor"
+                android:valueTo="?attr/colorOnBackground"
+                android:valueType="colorType" />
+            <objectAnimator
+                android:duration="0"
+                android:propertyName="translationZ"
+                android:valueTo="12"
+                android:valueType="floatType" />
+        </set>
     </item>
 </selector>

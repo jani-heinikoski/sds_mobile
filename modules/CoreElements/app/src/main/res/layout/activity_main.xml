@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout style="@style/CustomActionBar">
         <TextView
@@ -12,5 +13,7 @@
     <Button
         android:layout_centerInParent="true"
         style="@style/CustomButton"
+        app:backgroundTint="@null"
         android:text="@string/activity_main_launch_second_activity_button_text" />
+
 </RelativeLayout>
