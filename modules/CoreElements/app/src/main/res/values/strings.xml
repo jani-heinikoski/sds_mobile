@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Quick Launcher</string>
     <string name="activity_main_launch_second_activity_button_text">Launch Second Activity</string>
+    <string name="activity_main_launch_google_button_text">Open Google</string>
 </resources>

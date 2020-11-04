@@ -11,9 +11,19 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/button_launch_second_activity"
         android:layout_centerInParent="true"
         style="@style/CustomButton"
         app:backgroundTint="@null"
         android:text="@string/activity_main_launch_second_activity_button_text" />
+
+    <Button
+        android:id="@+id/button_launch_google"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button_launch_second_activity"
+        android:layout_marginTop="48dp"
+        style="@style/CustomButton"
+        app:backgroundTint="@null"
+        android:text="@string/activity_main_launch_google_button_text" />
 
 </RelativeLayout>
