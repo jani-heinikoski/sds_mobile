@@ -49,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openGoogle() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
-        if (intent.resolveActivity(getPackageManager()) != null) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("https://www.google.com");
+        intent.setData(data);
+        try {
             startActivity(intent);
-        }
+        } catch (Exception ignored) {}
     }
 }
