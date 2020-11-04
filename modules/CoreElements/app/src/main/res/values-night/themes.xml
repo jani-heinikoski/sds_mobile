@@ -15,6 +15,7 @@
         <item name="android:windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <!-- Dark theme coloring -->
+        <item name="android:navigationBarColor">?attr/colorPrimarySurface</item>
         <item name="colorPrimarySurface">@color/surface_primary_dark</item>
         <item name="colorOnPrimarySurface">@color/white</item>
         <item name="colorOnBackground">@color/white</item>

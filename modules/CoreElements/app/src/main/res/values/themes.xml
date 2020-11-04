@@ -16,6 +16,8 @@
         <item name="windowNoTitle">true</item>
         <!-- Default theme coloring -->
         <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="android:navigationBarColor">?attr/colorPrimarySurface</item>
         <item name="colorPrimarySurface">@color/surface_primary</item>
         <item name="colorOnPrimarySurface">@color/white</item>
         <item name="colorOnBackground">@color/black</item>
