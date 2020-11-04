@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_gradient">
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/custom_actionbar"
+        style="@style/ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            style="@style/TextOnSurface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_main_actionbar_title" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textview_first_number"
-        style="@style/Introduction.TextView"
+        style="@style/TextOnBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom_actionbar"
         android:layout_marginTop="32dp"
         android:labelFor="@id/edittext_first_number"
         android:text="@string/activity_main_first_number_label_text" />
 
     <EditText
         android:id="@+id/edittext_first_number"
-        style="@style/Introduction.EditText"
+        style="@style/TextOnBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textview_first_number"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textview_second_number"
-        style="@style/Introduction.TextView"
+        style="@style/TextOnBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/edittext_first_number"
         android:layout_marginTop="32dp"
         android:labelFor="@id/edittext_first_number"
@@ -27,16 +50,20 @@
 
     <EditText
         android:id="@+id/edittext_second_number"
-        style="@style/Introduction.EditText"
+        style="@style/TextOnBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textview_second_number"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textview_result"
-        style="@style/Introduction.TextView"
+        style="@style/TextOnBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/edittext_second_number"
         android:layout_marginTop="32dp"
         android:text="@string/activity_main_result_label_text" />
-
 
 </RelativeLayout>
