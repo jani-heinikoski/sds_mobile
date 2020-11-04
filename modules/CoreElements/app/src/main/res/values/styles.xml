@@ -29,7 +29,7 @@
     </style>
 
     <style name="CustomButton" parent="TextOnBackground">
-        <item name="android:stateListAnimator">@animator/custom_button_state_transition</item>
+        <item name="android:stateListAnimator">@animator/custom_button_state_list_animator</item>
         <item name="android:background">@drawable/custom_button_background</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

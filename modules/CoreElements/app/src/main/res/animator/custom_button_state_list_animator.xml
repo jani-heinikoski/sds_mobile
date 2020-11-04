@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Adapted from source https://stackoverflow.com/questions/35400318/custom-button-animation-in-android
+ Created by user: Vitaly Zinchenko 15.02.2016
+ Edited by user: Hanzala 26.10.2018
+ Referred: 04.11.2020
+ Website: Stackoverflow
+ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true">
+        <set>
+            <objectAnimator
+                android:duration="100"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="ScaleX"
+                android:valueFrom="1.00"
+                android:valueTo="1.025"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="ScaleY"
+                android:valueFrom="1.00"
+                android:valueTo="1.015"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="textColor"
+                android:valueFrom="?attr/colorOnBackground"
+                android:valueTo="?attr/colorAccent"
+                android:valueType="colorType" />
+        </set>
+    </item>
+    <item
+        android:state_enabled="true">
+        <set>
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="ScaleX"
+                android:valueTo="1"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="ScaleY"
+                android:valueTo="1"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="textColor"
+                android:valueFrom="?attr/colorAccent"
+                android:valueTo="?attr/colorOnBackground"
+                android:valueType="colorType" />
+        </set>
+    </item>
+    <item>
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="ScaleX"
+            android:valueTo="1"
+            android:valueType="floatType" />
+    </item>
+</selector>
