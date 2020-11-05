@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ListViewDemo</string>
+    <string name="activity_main_actionbar_label_text">Select an item …</string>
+</resources>

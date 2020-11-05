@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_activity_action_bar"
+        style="@style/CustomActionBar">
+
+        <TextView
+            style="@style/ActionBarTitle"
+            android:text="@string/activity_main_actionbar_label_text" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_activity_action_bar" />
+
+</RelativeLayout>
