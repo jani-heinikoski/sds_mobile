@@ -6,15 +6,20 @@
     <RelativeLayout
         android:id="@+id/main_activity_action_bar"
         style="@style/CustomActionBar">
-
         <TextView
             style="@style/ActionBarTitle"
             android:text="@string/activity_main_actionbar_label_text" />
     </RelativeLayout>
 
     <ListView
+        android:id="@+id/main_activity_list_view_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main_activity_action_bar" />
+        android:layout_below="@id/main_activity_action_bar"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="16dp" />
 
 </RelativeLayout>
