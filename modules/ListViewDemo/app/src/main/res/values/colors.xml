@@ -5,7 +5,7 @@
     <color name="surface_primary_dark">#212121</color>
     <color name="surface_primary">#FFFFFF</color>
     <color name="surface_dark">#232323</color>
-    <color name="surface">@color/purple_700</color>
+    <color name="surface">@color/purple_500</color>
     <color name="error_color">#D32F2F</color>
 
     <color name="red_light">#f73378</color>
