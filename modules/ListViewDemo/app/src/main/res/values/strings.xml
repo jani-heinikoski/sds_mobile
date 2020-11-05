@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">ListViewDemo</string>
     <string name="activity_main_actionbar_label_text">Select an item …</string>
+
+    <string-array name="list_items">
+        <item>Peach</item>
+        <item>Tomato</item>
+        <item>Banana</item>
+    </string-array>
+
+    <string-array name="list_prices">
+        <item>€0.99</item>
+        <item>€0.50</item>
+        <item>€1.20</item>
+    </string-array>
+
+    <string-array name="list_descriptions">
+        <item>Fresh peach</item>
+        <item>Rotten tomato</item>
+        <item>Cold banana from Siberia</item>
+    </string-array>
 </resources>
