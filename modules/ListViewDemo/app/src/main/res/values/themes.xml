@@ -19,8 +19,8 @@
         <!-- Surface colors -->
         <item name="colorPrimarySurface">@color/surface_primary</item>
         <item name="colorSurface">@color/surface</item>
-        <item name="colorOnPrimarySurface">@color/white</item>
-        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnPrimarySurface">@color/dark_gray</item>
+        <item name="colorOnSurface">@color/white</item>
         <!-- Background -->
         <item name="colorOnBackground">@color/dark_gray</item>
         <item name="android:windowBackground">@color/bg_light</item>
