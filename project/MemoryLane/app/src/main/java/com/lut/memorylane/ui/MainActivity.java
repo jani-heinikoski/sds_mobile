@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements IFragmentOwner {
         setContentView(binding.getRoot());
 
         fragmentManager = getSupportFragmentManager();
+        changeFragment(new MainMenuFragment(), false);
     }
 
     @Override
