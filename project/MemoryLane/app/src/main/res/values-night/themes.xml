@@ -10,7 +10,17 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- No title/default actionbar -->
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Bottom navbar color -->
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <!-- Surface colors -->
+        <item name="colorPrimarySurface">@color/surface_primary_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnPrimarySurface">@color/white</item>
+        <!-- Background -->
+        <item name="colorOnBackground">@color/white</item>
     </style>
 </resources>

@@ -6,11 +6,23 @@
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/red_dark</item>
+        <item name="colorSecondaryVariant">@color/red_light</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- No title/default actionbar -->
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Default theme coloring -->
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <!-- Surface colors -->
+        <item name="colorPrimarySurface">@color/surface_primary</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnPrimarySurface">@color/dark_gray</item>
+        <item name="colorOnSurface">@color/white</item>
+        <!-- Background -->
+        <item name="colorOnBackground">@color/dark_gray</item>
+        <item name="android:windowBackground">@color/bg_light</item>
     </style>
 </resources>
