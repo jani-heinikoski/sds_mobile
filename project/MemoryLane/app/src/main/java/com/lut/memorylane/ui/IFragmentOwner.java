@@ -1,3 +1,7 @@
+/*
+* Author: Jani Heinikoski
+* Created: 14.12.2020
+ */
 package com.lut.memorylane.ui;
 
 import androidx.fragment.app.Fragment;
