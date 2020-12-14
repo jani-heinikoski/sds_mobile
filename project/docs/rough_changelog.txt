@@ -1,3 +1,9 @@
 14.12.2020
 - Came up with project's idea
 - Created base of the project
+	- Preli. themes and coloring
+	- Fragment holder for single activity application
+	- Custom toolbar (uses relativelayout because only uses one icon/button --> no extra dependencies)
+	- Source code structure (packages for ui, data and utility)
+
+	
