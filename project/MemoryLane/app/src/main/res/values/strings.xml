@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MemoryLane</string>
+    <string name="main_activity_action_bar_title_home">Memory Lane - Home Page</string>
 </resources>
