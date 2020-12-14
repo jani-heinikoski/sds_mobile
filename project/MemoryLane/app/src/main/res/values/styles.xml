@@ -12,7 +12,6 @@
     <style name="ActionBarTitle">
         <item name="android:layout_margin">8dp</item>
         <item name="android:layout_centerVertical">true</item>
-        <item name="android:layout_alignParentStart">true</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
