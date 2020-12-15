@@ -21,13 +21,17 @@
     </style>
 
     <style name="Base.Widget.AppCompat.ProgressBar.Horizontal.GameProgressBar">
-        <item name="android:layout_margin">8dp</item>
-        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
         <item name="elevation">8dp</item>
         <item name="android:indeterminate">false</item>
         <item name="android:max">5000</item>
         <item name="android:progress">0</item>
         <item name="android:progressDrawable">@drawable/game_progress_bar</item>
+    </style>
+
+    <style name="GameGridButtonMargin">
+        <item name="android:layout_margin">2dp</item>
     </style>
 
 </resources>
