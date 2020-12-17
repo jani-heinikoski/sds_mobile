@@ -12,11 +12,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.lut.memorylane.R;
 import com.lut.memorylane.databinding.FragmentMainMenuBinding;
 
 public class MainMenuFragment extends Fragment {
@@ -42,12 +44,24 @@ public class MainMenuFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        fragmentOwner.changeActionbar(R.drawable.ic_baseline_home_24, R.string.main_activity_action_bar_title_home, null);
+    }
+
     private void initializeMainMenuButtons() {
         // Switch to Speed Test fragment when corresponding button is clicked
         binding.fragmentMainButtonSpeedTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 fragmentOwner.changeFragment(new SpeedTestFragment(), true);
+                fragmentOwner.changeActionbar(R.drawable.ic_baseline_arrow_back_24, R.string.main_activity_action_bar_title_speed_test, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragmentOwner.popBackStack();
+                    }
+                });
             }
         });
         // Switch to Memory Test fragment when corresponding button is clicked
@@ -55,6 +69,12 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 fragmentOwner.changeFragment(new MemoryTestFragment(), true);
+                fragmentOwner.changeActionbar(R.drawable.ic_baseline_arrow_back_24, R.string.main_activity_action_bar_title_memory_test, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragmentOwner.popBackStack();
+                    }
+                });
             }
         });
         // Switch to High Score fragment when corresponding button is clicked
@@ -62,6 +82,12 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 fragmentOwner.changeFragment(new HighScoreFragment(), true);
+                fragmentOwner.changeActionbar(R.drawable.ic_baseline_arrow_back_24, R.string.main_activity_action_bar_title_high_score, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragmentOwner.popBackStack();
+                    }
+                });
             }
         });
     }
