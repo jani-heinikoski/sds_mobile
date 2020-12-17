@@ -22,30 +22,20 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.lut.memorylane.databinding.FragmentSpeedTestBinding;
+import com.lut.memorylane.utility.SharedViewModel;
 
 public class SpeedTestFragment extends Fragment {
 
     private FragmentSpeedTestBinding binding;
-    private IFragmentOwner fragmentOwner;
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        if (context instanceof IFragmentOwner) {
-            fragmentOwner = (IFragmentOwner) context;
-        } else {
-            System.err.println("OwnerActivity must implement IFragmentOwner interface.");
-            System.exit(-1);
-        }
-    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentSpeedTestBinding.inflate(inflater, container, false);
-
         return binding.getRoot();
     }
 
@@ -54,7 +44,7 @@ public class SpeedTestFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ObjectAnimator objectAnimator = ObjectAnimator.ofInt(binding.fragmentSpeedTestProgressBar, "progress", 0, 5000);
         objectAnimator.setInterpolator(new LinearInterpolator());
-        objectAnimator.setDuration(5000);
+        objectAnimator.setDuration(25000);
         objectAnimator.start();
 
 
