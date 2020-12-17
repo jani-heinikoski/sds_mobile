@@ -20,6 +20,7 @@
             app:backgroundTint="@null" />
 
         <TextView
+            android:id="@+id/main_activity_action_bar_textview_title"
             style="@style/ActionBarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
