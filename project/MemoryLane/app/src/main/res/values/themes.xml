@@ -24,5 +24,10 @@
         <!-- Background -->
         <item name="colorOnBackground">@color/dark_gray</item>
         <item name="android:windowBackground">@color/bg_light</item>
+        <!-- Game Buttons  -->
+        <item name="gameButton1Normal">@color/game_button_1_normal</item>
+        <item name="gameButton2Normal">@color/game_button_2_normal</item>
+        <item name="gameButton3Normal">@color/game_button_3_normal</item>
+        <item name="gameButton4Normal">@color/game_button_4_normal</item>
     </style>
 </resources>
