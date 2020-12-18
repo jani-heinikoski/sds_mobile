@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="gameButton1Normal" format="color|reference"/>
+    <attr name="gameButton2Normal" format="color|reference"/>
+    <attr name="gameButton3Normal" format="color|reference"/>
+    <attr name="gameButton4Normal" format="color|reference"/>
+</resources>
