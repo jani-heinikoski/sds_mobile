@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ProgressBar
+    <com.lut.memorylane.ui.GameProgressBar
         android:id="@+id/fragment_speed_test_progress_bar"
         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal.GameProgressBar"
         android:layout_width="match_parent"
