@@ -19,7 +19,7 @@ import com.lut.memorylane.ui.GameProgressBar;
 /* Handles all the animations in the game (button highlighting and progressbar)
 * Static final variables can be tweaked to fine tune functionality */
 public class GameAnimationHandler {
-    private static final int PROGRESS_BAR_ANIM_DURATION = 50000;
+    private static final int PROGRESS_BAR_ANIM_DURATION = 60000;
     private static final int GAME_BUTTON_HIGHLIGHT_DURATION = 100;
 
     private static final int PROGRESS_BAR_MAX = 5000;
