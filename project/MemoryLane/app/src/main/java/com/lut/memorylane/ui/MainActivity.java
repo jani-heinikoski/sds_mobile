@@ -6,7 +6,6 @@
 * */
 package com.lut.memorylane.ui;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -69,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements IFragmentOwner {
                 binding.mainActivityActionBarButtonHomeIcon.setOnClickListener(onClickListener);
             }
         });
+
     }
 
     @Override
