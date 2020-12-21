@@ -7,6 +7,8 @@
  * */
 package com.lut.memorylane.ui;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -21,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.lut.memorylane.data.GameState;
+import com.lut.memorylane.databinding.DialogItemBinding;
 import com.lut.memorylane.databinding.FragmentSpeedTestBinding;
 import com.lut.memorylane.utility.GameAnimationHandler;
 import com.lut.memorylane.utility.SpeedTestViewModel;
@@ -32,6 +35,9 @@ public class SpeedTestFragment extends Fragment implements IProgressCallback {
     private FragmentSpeedTestBinding binding;
     private SpeedTestViewModel speedTestViewModel;
     private GameAnimationHandler gameAnimationHandler;
+
+    private Dialog dialog;
+    private DialogItemBinding dialogItemBinding;
 
     private Handler uiThreadHandler;
 
@@ -65,7 +71,8 @@ public class SpeedTestFragment extends Fragment implements IProgressCallback {
             b.setOnClickListener(null);
         }
         //TODO Replace with GameOver dialog
-        Toast.makeText(getContext(), "GAME OVER " + speedTestViewModel.getCurrentSpeedTestGameState().getPlayerScore(), Toast.LENGTH_SHORT).show();
+        dialogItemBinding.dialogItemGameOverText.setText((CharSequence) ("Game over, score: " + gs.getPlayerScore()));
+        dialog.show();
     }
 
     @Override
@@ -117,6 +124,25 @@ public class SpeedTestFragment extends Fragment implements IProgressCallback {
                     speedTestViewModel.setCurrentDelay(speedTestViewModel.getCurrentDelay() - DECREASE_DELAY_MILLIS);
                 }
                 uiThreadHandler.postDelayed(this, speedTestViewModel.getCurrentDelay());
+            }
+        });
+
+        this.dialog = new Dialog(getContext());
+        this.dialogItemBinding = DialogItemBinding.inflate(inflater);
+        this.dialog.setContentView(dialogItemBinding.getRoot());
+
+        dialogItemBinding.dialogItemContainer.setClickable(false);
+        dialogItemBinding.dialogItemButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                getParentFragmentManager().popBackStack();
+            }
+        });
+        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface d) {
+                getParentFragmentManager().popBackStack();
             }
         });
 
