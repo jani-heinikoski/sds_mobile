@@ -14,9 +14,13 @@ import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 
+import com.lut.memorylane.ui.GameProgressBar;
+
+/* Handles all the animations in the game (button highlighting and progressbar)
+* Static final variables can be tweaked to fine tune functionality */
 public class GameAnimationHandler {
-    private static final int PROGRESS_BAR_ANIM_DURATION = 30000;
-    private static final int GAME_BUTTON_HIGHLIGHT_DURATION = 150;
+    private static final int PROGRESS_BAR_ANIM_DURATION = 50000;
+    private static final int GAME_BUTTON_HIGHLIGHT_DURATION = 100;
 
     private static final int PROGRESS_BAR_MAX = 5000;
 
@@ -28,10 +32,9 @@ public class GameAnimationHandler {
 
     private ObjectAnimator gameProgressBarAnimator = null;
     private ObjectAnimator[] gameButtonAnimators = null;
-    private long currentProgressBarPlayTime, currentButtonAnimationPlayTime;
+    private long currentProgressBarPlayTime;
 
     private GameAnimationHandler() {
-        currentButtonAnimationPlayTime = 0;
         currentProgressBarPlayTime = 0;
     }
 
@@ -42,44 +45,15 @@ public class GameAnimationHandler {
         return gameAnimationHandler;
     }
 
-    public void pauseAnimations() {
-        if (gameProgressBarAnimator != null) {
-            currentProgressBarPlayTime = gameProgressBarAnimator.getCurrentPlayTime();
-            gameProgressBarAnimator.pause();
-        }
-
-        if (gameButtonAnimators != null) {
-            for (ObjectAnimator oa : gameButtonAnimators) {
-                if (oa != null) {
-                    currentButtonAnimationPlayTime = oa.getCurrentPlayTime();// TODO check if needed
-                    oa.pause();
-                }
-            }
-        }
-    }
-
-    public void continueAnimations() {
-        if (gameProgressBarAnimator != null) {
-            gameProgressBarAnimator.setCurrentPlayTime(currentProgressBarPlayTime);
-            gameProgressBarAnimator.start();
-        }
-
-        if (gameButtonAnimators != null) {
-            for (ObjectAnimator oa : gameButtonAnimators) {
-                if (oa != null) {
-                    oa.setCurrentPlayTime(currentButtonAnimationPlayTime); // TODO check if needed
-                    oa.start();
-                }
-            }
-        }
-    }
-
-    public void startGameProgressBar(@NonNull ProgressBar gameProgressBar) {
+    public void startGameProgressBar(@NonNull GameProgressBar gameProgressBar) {
         if (gameProgressBarAnimator == null) {
             gameProgressBarAnimator = ObjectAnimator.ofInt(gameProgressBar, "progress", 0, PROGRESS_BAR_MAX);
             gameProgressBarAnimator.setInterpolator(new LinearInterpolator());
             gameProgressBarAnimator.setDuration(PROGRESS_BAR_ANIM_DURATION);
         }
+        currentProgressBarPlayTime = gameProgressBarAnimator.getCurrentPlayTime();
+        gameProgressBarAnimator.setTarget(gameProgressBar);
+        gameProgressBarAnimator.setCurrentPlayTime(currentProgressBarPlayTime);
         gameProgressBarAnimator.start();
     }
 
@@ -105,9 +79,25 @@ public class GameAnimationHandler {
         }
     }
 
+    public void pauseProgressBar() {
+        gameProgressBarAnimator.pause();
+    }
+
+    public void resumeProgressBar() {
+        gameProgressBarAnimator.resume();
+    }
+
+    public void resetProgressBar() {
+        if (gameProgressBarAnimator != null) {
+            gameProgressBarAnimator.setCurrentPlayTime(0);
+        }
+    }
+
     private void updateAnimatorArrayTargets(@NonNull Object target, @NonNull ObjectAnimator[] animators) {
         for (ObjectAnimator oa : animators) {
+            oa.cancel();
             oa.setTarget(target);
         }
     }
+
 }
