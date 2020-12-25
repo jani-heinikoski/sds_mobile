@@ -8,4 +8,6 @@
     <string name="fragment_main_menu_button_speed_test_text">Speed Test Mode</string>
     <string name="fragment_main_menu_button_memory_test_text">Memory Test Mode</string>
     <string name="fragment_main_menu_button_high_scores_text">High Scores</string>
+
+    <string name="fragment_high_score_button_delete_high_scores_text">Delete all high scores</string>
 </resources>

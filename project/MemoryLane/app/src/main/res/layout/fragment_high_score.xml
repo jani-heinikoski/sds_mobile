@@ -3,14 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/fragment_high_score_textview_delete_high_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fragment_high_score_button_delete_high_scores_text"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="18sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_high_score_button_delete_high_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fragment_high_score_textview_delete_high_scores"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_baseline_delete_forever_24" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_high_score_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/fragment_high_score_button_delete_high_scores"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp" />
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>
