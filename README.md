@@ -3,7 +3,7 @@ This is a code repository containing everything required to pass the course Soft
 
 WHERE AND WHAT
 
-The learning diary can be found under directory ./documentation
+The learning diary can be found under directory ./documentation.
 Course module tasks can be found as Android Studio projects under ./modules and project under ./project
 
 HOW TO INSTALL
