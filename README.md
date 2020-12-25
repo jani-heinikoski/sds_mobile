@@ -1,5 +1,6 @@
 # sds_mobile
 This is a code repository containing everything required to pass the course Software Development Skills: Mobile 2020-21. Repository is authored only by Jani Heinikoski.
+I have taken the liberty to slightly modify the course module exercises (made them a little bit more complex so I could refresh my memory for the course project).
 
 WHERE AND WHAT
 
