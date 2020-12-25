@@ -1,3 +1,9 @@
+/*
+ * Author: Jani Heinikoski
+ * Created: 21.12.2020
+ * Last updated: see github repository https://github.com/jani-heinikoski/sds_mobile#sds_mobile
+ * Sources:
+ * */
 package com.lut.memorylane.utility;
 
 import androidx.lifecycle.ViewModel;

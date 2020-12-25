@@ -10,7 +10,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
-import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 
