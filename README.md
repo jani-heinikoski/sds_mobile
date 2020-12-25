@@ -5,7 +5,9 @@ I have taken the liberty to slightly modify the course module exercises (made th
 WHERE AND WHAT
 
 The learning diary can be found under directory ./documentation.
-Course module tasks can be found as Android Studio projects under ./modules and project under ./project
+Course module tasks can be found as Android Studio projects under ./modules and project under ./project.
+A brief demonstration video about the course project running & working is available at https://drive.google.com/file/d/1COIHV9fhcSZCUrt0K8hdOrcvQNEHNDz7/view?usp=sharing
+The project's idea is my version of the coinline's speed test game (featured e.g. in a finnish game show called "Speden Spelit"). The game highlights buttons in a certain order and the player needs to click the buttons in the same sequence. The project is fully lifecycle aware; you can rotate your screen or navigate away and back from the app and it will recover its state. It uses an SQLite database to store the high scores (locally) and a recycler view to display them.
 
 HOW TO INSTALL
 
