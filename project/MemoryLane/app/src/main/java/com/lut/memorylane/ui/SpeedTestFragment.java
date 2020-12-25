@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +22,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.lut.memorylane.data.GameState;
+import com.lut.memorylane.data.HighScore;
 import com.lut.memorylane.databinding.DialogItemBinding;
 import com.lut.memorylane.databinding.FragmentSpeedTestBinding;
 import com.lut.memorylane.utility.GameAnimationHandler;
@@ -70,7 +70,6 @@ public class SpeedTestFragment extends Fragment implements IProgressCallback {
         for (Button b : gameButtonsOrdered) {
             b.setOnClickListener(null);
         }
-        //TODO Replace with GameOver dialog
         dialogItemBinding.dialogItemGameOverText.setText((CharSequence) ("Game over, score: " + gs.getPlayerScore()));
         dialog.show();
     }
@@ -142,6 +141,7 @@ public class SpeedTestFragment extends Fragment implements IProgressCallback {
         dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface d) {
+                new ViewModelProvider(requireActivity()).get(HighScoreViewModel.class).insert(new HighScore(speedTestViewModel.getCurrentSpeedTestGameState().getPlayerScore()));
                 getParentFragmentManager().popBackStack();
             }
         });
