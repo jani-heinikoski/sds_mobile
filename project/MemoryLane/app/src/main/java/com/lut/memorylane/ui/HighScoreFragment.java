@@ -7,7 +7,6 @@
  * */
 package com.lut.memorylane.ui;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,24 +15,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.lut.memorylane.data.HighScore;
 import com.lut.memorylane.databinding.FragmentHighScoreBinding;
+
+import java.util.List;
 
 public class HighScoreFragment extends Fragment {
 
     private FragmentHighScoreBinding binding;
-    private IFragmentOwner fragmentOwner;
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        if (context instanceof IFragmentOwner) {
-            fragmentOwner = (IFragmentOwner) context;
-        } else {
-            System.err.println("OwnerActivity must implement IFragmentOwner interface.");
-            System.exit(-1);
-        }
-    }
+    private HighScoreViewModel viewModel;
+    private HighScoreRecyclerAdapter recyclerAdapter;
 
     @Nullable
     @Override
@@ -42,4 +38,30 @@ public class HighScoreFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        viewModel = new ViewModelProvider(requireActivity()).get(HighScoreViewModel.class);
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        binding.fragmentHighScoreRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(requireActivity());
+        binding.fragmentHighScoreRecyclerView.setLayoutManager(layoutManager);
+        recyclerAdapter = new HighScoreRecyclerAdapter(viewModel.getHighScoresOrdered().getValue());
+        binding.fragmentHighScoreRecyclerView.setAdapter(recyclerAdapter);
+
+        viewModel.getHighScoresOrdered().observe(getViewLifecycleOwner(), new Observer<List<HighScore>>() {
+            @Override
+            public void onChanged(List<HighScore> highScores) {
+                recyclerAdapter.changeHighScores(highScores);
+            }
+        });
+
+        binding.fragmentHighScoreButtonDeleteHighScores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.deleteAll();
+            }
+        });
+    }
 }
