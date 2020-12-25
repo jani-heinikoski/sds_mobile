@@ -14,20 +14,10 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/fragment_main_button_memory_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fragment_main_button_speed_test"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/fragment_main_menu_button_memory_test_text"
-        android:textSize="30sp" />
-
-    <Button
         android:id="@+id/fragment_main_button_high_scores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fragment_main_button_memory_test"
+        android:layout_below="@id/fragment_main_button_speed_test"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/fragment_main_menu_button_high_scores_text"

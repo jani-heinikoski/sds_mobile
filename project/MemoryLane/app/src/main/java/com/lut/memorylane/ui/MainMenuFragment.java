@@ -58,10 +58,6 @@ public class MainMenuFragment extends Fragment {
         binding.fragmentMainButtonSpeedTest.setOnClickListener(getButtonOnClickListener(
                 R.string.main_activity_action_bar_title_speed_test, new SpeedTestFragment()
         ));
-        // Switch to Memory Test fragment when corresponding button is clicked
-        binding.fragmentMainButtonMemoryTest.setOnClickListener(getButtonOnClickListener(
-                R.string.main_activity_action_bar_title_memory_test, new MemoryTestFragment()
-        ));
         // Switch to High Score fragment when corresponding button is clicked
         binding.fragmentMainButtonHighScores.setOnClickListener(getButtonOnClickListener(
                 R.string.main_activity_action_bar_title_high_score, new HighScoreFragment()
